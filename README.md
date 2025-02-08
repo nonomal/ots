@@ -1,15 +1,11 @@
 <p align="center">
-  Please upgrade the CLI to <a href="https://github.com/sniptt-official/ots/releases/tag/v0.1.0">version 0.1.0</a>
-</p>
-
-<p align="center">
   <a href="https://sniptt.com">
-    <img src=".github/assets/ots-social-cover.svg" alt="Ots Logo" />
+    <img src=".github/assets/ots-social-cover.svg" alt="OTS Logo" />
   </a>
 </p>
 
 <p align="right">
-  <i>If you use this repo, star it ✨</i>
+  <i>If you use this repo, please star it ✨</i>
 </p>
 
 ***
@@ -34,19 +30,15 @@
 
 The recommended way to install `ots` on macOS is via Homebrew.
 
-```sh
+```
 brew install ots
 ```
 
 ### Go
 
-```sh
+```
 go get -u github.com/sniptt-official/ots
 ```
-
-### Manual
-
-Please refer to the [manual install](./docs/manual-install.md) doc.
 
 ## Usage
 
@@ -54,36 +46,40 @@ Please refer to the [manual install](./docs/manual-install.md) doc.
 
 ### Prompt
 
-```sh
-$ ots new -x 2h
+```
+> ots new -x 2h
 Enter your secret: 
 ```
+
+The default expiry is 24 hours.
 
 ### Pipeline
 
 You can also use pipes, for example
 
-```sh
-$ pbpaste | ots new
+```
+pbpaste | ots new
 ```
 
 or
 
-```sh
-$ cat .env | ots new
+```
+cat .env | ots new
 ```
 
 ### Data residency
 
 Use `--region` to choose where the secrets reside.
 
-```sh
-$ ots new -x 24h --region eu-central-1
+The default region is `us-east-1`.
+
+```
+ots new -x 24h --region eu-central-1
 ```
 
 ## FAQs
 
-Please refer to our Q\&A discussions.
+Please refer to our Q&A discussions.
 
 *   [Why should I trust you with my secrets?](https://github.com/sniptt-official/ots/discussions/13)
 *   [Can I persist my secrets for later use?](https://github.com/sniptt-official/ots/discussions/15)
